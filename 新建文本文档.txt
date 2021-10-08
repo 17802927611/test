@@ -1,0 +1,5 @@
+SELECT ho.order_id ,order_price ,come_time,out_time,client_number,deposit_number 
+FROM sys_hotel_order ho ,
+	sys_hotel_client_room_order hcro,
+	sys_hotel_room hr
+WHERE ho.order_id = hcro.`order_id` AND hr.`room_id` = hcro.`room_id`
